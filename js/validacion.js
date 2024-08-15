@@ -25,6 +25,12 @@ if (password1.length < 6) {
         showAlertError();
         return;
     }
+
+// Validar que se hayan aceptado los términos y condiciones
+    if (!terminos) {
+        showAlertError();
+        return;
+    }
     
 function showAlertSuccess() {
     document.getElementById("alert-success").classList.add("show");
