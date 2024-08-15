@@ -1,7 +1,7 @@
 document.getElementById('regBtn').addEventListener('click', validateForm);
 
 function validateForm() {
-    // Obtener los valores de los campos del formulario
+    // conseguir valores de los campos necesarios para rellenar formulario
     const nombre = document.getElementById('nombre').value;
     const apellido = document.getElementById('apellido').value;
     const email = document.getElementById('email').value;
@@ -9,7 +9,7 @@ function validateForm() {
     const password2 = document.getElementById('password2').value;
     const terminos = document.getElementById('terminos').checked;
 
-    // Validar que ningún campo esté vacío
+    // check que ningún campo esté vacío
     if (nombre === '' || apellido === '' || email === '' || password1 === '' || password2 === '') {
         showAlertError();
         return;
