@@ -31,7 +31,10 @@ if (password1.length < 6) {
         showAlertError();
         return;
     }
-    
+
+// Si todas las validaciones se cumplen, mostrar alerta de éxito
+    showAlertSuccess();
+}
 function showAlertSuccess() {
     document.getElementById("alert-success").classList.add("show");
 
