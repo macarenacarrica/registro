@@ -1,3 +1,21 @@
+document.getElementById('regBtn').addEventListener('click', validateForm);
+
+function validateForm() {
+    // Obtener los valores de los campos del formulario
+    const nombre = document.getElementById('nombre').value;
+    const apellido = document.getElementById('apellido').value;
+    const email = document.getElementById('email').value;
+    const password1 = document.getElementById('password1').value;
+    const password2 = document.getElementById('password2').value;
+    const terminos = document.getElementById('terminos').checked;
+
+    // Validar que ningún campo esté vacío
+    if (nombre === '' || apellido === '' || email === '' || password1 === '' || password2 === '') {
+        showAlertError();
+        return;
+    }
+
+
 function showAlertSuccess() {
     document.getElementById("alert-success").classList.add("show");
 }
