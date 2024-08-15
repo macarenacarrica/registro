@@ -20,6 +20,12 @@ if (password1.length < 6) {
     showAlertError();
     return;
 }
+// Validar que las contraseñas sean iguales
+    if (password1 !== password2) {
+        showAlertError();
+        return;
+    }
+    
 function showAlertSuccess() {
     document.getElementById("alert-success").classList.add("show");
 
